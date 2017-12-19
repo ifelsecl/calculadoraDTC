@@ -3,6 +3,7 @@
 
 .home {
     background-image: url('../img/IMG_0072.JPG');
+    background-size: cover;
     cursor: url('https://ionicframework.com/img/finger.png'), auto;
 }
 
@@ -43,4 +44,29 @@ body {
   .button.ng-hide{
     display:none;
   }
-  
+
+  .start{
+      background-color: #47b475 !important ;
+      opacity: 0.95;
+      font-size: 1.5em;
+  }
+
+  .Absolute-Center {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    height: 100%;
+}
+
+.green-back{
+    background-color: #47b475 !important ;
+}
+
+.item-select {
+    height: 40px;
+}
+
+.item-select select {
+    max-width: 100%;
+    width: 100%;
+}

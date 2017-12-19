@@ -34,6 +34,9 @@ $scope.startApp = function() {
 .controller('IntroCtrl', function($scope, $state, $ionicSlideBoxDelegate) {
   
    // Called to navigate to the main app
+   $scope.goHome = function() {
+    $state.go('tab.dash');
+  };
    $scope.startApp = function() {
      $state.go('main');
    };
@@ -50,8 +53,29 @@ $scope.startApp = function() {
    };
  })
  
- .controller('MainCtrl', function($scope, $state) {
+ .controller('MainCtrl', function($scope, $state, $ionicHistory) {
    console.log('MainCtrl');
+
+   $scope.next = function() {
+    $ionicSlideBoxDelegate.next();
+  };
+  $scope.previous = function() {
+    $ionicSlideBoxDelegate.previous();
+  };
+
+  // Called each time the slide changes
+  $scope.slideChanged = function(index) {
+    $scope.slideIndex = index;
+  };
+
+   $scope.goBack = function() {
+    $backView = $ionicHistory.backView();
+    $backView.go();
+  };
+
+  $scope.goHome = function() {
+    $state.go('tab.dash');
+  };
    
    $scope.toIntro = function(){
      $state.go('intro');

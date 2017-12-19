@@ -1,18 +1,41 @@
 <ion-view hide-back-button="true" view-title="Resultados">
     <ion-nav-buttons side="left">
         <button class="button button-positive button-clear no-animation"
-                ng-click="startApp()">
-          Cancelar
+                ng-click="goHome()">
+          Salir
         </button>
       </ion-nav-buttons>
       <ion-nav-buttons side="right">
           <button class="button button-positive button-clear no-animation"
-                  ng-click="previous()">
+                  ng-click="save()">
             Guardar
           </button>
         </ion-nav-buttons>
-  <ion-content class="padding">
-    <h1>Main app here</h1>
-    <button class="button" ng-click="toIntro()">Do Tutorial Again</button>
-  </ion-content>
+      <ion-slide-box on-slide-changed="slideChanged(index)">
+          <ion-slide>
+            <h3>Porcentaje de Grasa</h3>
+            <div id="logo">
+              <img src="img/percentage.ico" width="150px" >
+            </div>
+
+            <h3 style="font-size: 5em; padding-top:20px;">20%</h3>
+      
+          </ion-slide>
+          <ion-slide>
+              <h3>Indice de Masa Corporal</h3>
+              <div id="logo">
+                <img src="https://cdn4.iconfinder.com/data/icons/electronics-material-3/128/148-512.png" width="150px" >
+              </div>
+  
+              <h3 style="font-size: 5em; padding-top:20px;">25,00</h3>
+          </ion-slide>
+          <ion-slide>
+              <h3>Tasa de Metabolismo Basal</h3>
+              <div id="logo">
+                <img src="https://i0.wp.com/orlandoivlounge.com/wp-content/uploads/2017/04/hcg_diet-kit.png?fit=300%2C300&ssl=1" width="150px" >
+              </div>
+  
+              <h3 style="font-size: 5em; padding-top:20px;">2109</h3>
+          </ion-slide>
+        </ion-slide-box>
 </ion-view>
